@@ -25,7 +25,7 @@ function render(pokemon) {
     <p>Nombre: ${pokemon.name}</p>
     <p>Altura: ${pokemon.height}</p>
     <p>Peso: ${pokemon.weight}</p>
-    <img src="${pokemon.img}" alt="${pokemon.name}">
+    <img src="${pokemon.sprites.front_default}" alt="${pokemon.name}">
     `;
 }
 
