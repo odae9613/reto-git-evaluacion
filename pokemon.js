@@ -34,7 +34,7 @@ function render(pokemon) {
     <p>Nombre: ${pokemon.name}</p>
     <p>Altura: ${pokemon.height}</p>
     <p>Peso: ${pokemon.weight}</p>
-    <img src="${pokemon.img}" alt="${pokemon.name}">
+    <img src="${pokemon.sprites.front_default}" alt="${pokemon.name}">
     `;
 }
 
@@ -58,7 +58,7 @@ async function llamadaJson() {
     try {
         const data = await fetchJson(url);
         render(data);
-        setErrorMessage();
+        setErrorMessage("OK");
     } catch(error) {
         setErrorMessage("Pokemon no encontrado");
     }
@@ -92,7 +92,7 @@ function llamadaJsonPromesa() {
     fetchJsonPromesas(url)
         .then(data => {
             render(data);
-            setErrorMessage("");
+            setErrorMessage("OK");
         })
         .catch(error => {
             setErrorMessage("Pokemon no encontrado");
