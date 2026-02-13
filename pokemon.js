@@ -83,7 +83,7 @@ function llamadaJsonPromesa() {
     fetchJsonPromesas(url)
         .then(data => {
             render(data);
-            setErrorMessage("");
+            setErrorMessage("OK");
         })
         .catch(error => {
             setErrorMessage("Pokemon no encontrado");
