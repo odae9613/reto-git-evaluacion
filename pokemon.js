@@ -3,6 +3,7 @@ const pokemonInput = document.getElementById("inputNombre");
 const result = document.getElementById("resultado");
 const mensaje = document.getElementById("mensajeError");
 const boton = document.getElementById("buscarPokemon");
+const botonPromesa = document.getElementById("buscarPokemonPromesa");
 const botonLimpiar = document.getElementById("limpiar");
 
 function clearResult() {
@@ -99,4 +100,5 @@ function llamadaJsonPromesa() {
 }
 
 boton.addEventListener("click", llamadaJson);
+botonPromesa.addEventListener("click", llamadaJsonPromesa);
 botonLimpiar.addEventListener("click", clearAll);
