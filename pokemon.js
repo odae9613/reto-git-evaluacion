@@ -3,10 +3,18 @@ const pokemonInput = document.getElementById("inputNombre");
 const result = document.getElementById("resultado");
 const mensaje = document.getElementById("mensajeError");
 const boton = document.getElementById("buscarPokemon");
+const botonLimpiar = document.getElementById("limpiar");
 
 function clearResult() {
     result.innerHTML="";
 }
+
+//  FUNCIÓN AGREGAR FUNCION LIMPIAR
+function clearAll() {
+    clearResult();
+    pokemonInput.value = "";
+}
+
 
 function validarNombre() {
     const nombre = pokemonInput.value.trim().toLowerCase();
@@ -91,3 +99,4 @@ function llamadaJsonPromesa() {
 }
 
 boton.addEventListener("click", llamadaJson);
+botonLimpiar.addEventListener("click", clearAll);
