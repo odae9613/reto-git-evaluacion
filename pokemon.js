@@ -49,7 +49,7 @@ async function llamadaJson() {
     try {
         const data = await fetchJson(url);
         render(data);
-        setErrorMessage();
+        setErrorMessage("OK");
     } catch(error) {
         setErrorMessage("Pokemon no encontrado");
     }
